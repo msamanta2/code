@@ -1,9 +1,138 @@
-
 schemas {
-  name: "Data"
+  name: "UIConfig"
   repo_id: "g6-android-spotlight"
   schema_fields {
-    name: "ui_config"
+    name: "is_reversed"
+    type: "BooleanField"
+    can_index: true
+    can_be_translated: false
+    indexed: false
+    translatable: false
+    repeated: false
+    required: false
+    displayed: false
+    description: "Denotes if the specific element has to be displayed in a reversed fashion."
+    validation_rule: ""
+    label: false
+    can_index_repeated: true
+    can_be_locale_varied: true
+    locale_varied: false
+    path_info {
+      path: "is_reversed"
+      field_type: UNLOCALIZED
+    }
+    can_be_required: false
+    fallback_strategy: OFF
+    locale_varied_translatable: false
+    can_be_locale_varied_translatable: false
+    restriction: UNRESTRICTED
+  }
+  schema_fields {
+    name: "is_dark_theme"
+    type: "BooleanField"
+    can_index: true
+    can_be_translated: false
+    indexed: false
+    translatable: false
+    repeated: false
+    required: false
+    displayed: false
+    description: "Defines if the element will render with darker background and lighter font color."
+    validation_rule: ""
+    label: false
+    can_index_repeated: true
+    can_be_locale_varied: true
+    locale_varied: false
+    path_info {
+      path: "is_dark_theme"
+      field_type: UNLOCALIZED
+    }
+    can_be_required: false
+    fallback_strategy: OFF
+    locale_varied_translatable: false
+    can_be_locale_varied_translatable: false
+    restriction: UNRESTRICTED
+  }
+  schema_fields {
+    name: "is_full_bleed"
+    type: "BooleanField"
+    can_index: true
+    can_be_translated: false
+    indexed: false
+    translatable: false
+    repeated: false
+    required: false
+    displayed: false
+    description: "Defines if the component will have an image bleeding from ether side"
+    validation_rule: ""
+    label: false
+    can_index_repeated: true
+    can_be_locale_varied: true
+    locale_varied: false
+    path_info {
+      path: "is_full_bleed"
+      field_type: UNLOCALIZED
+    }
+    can_be_required: false
+    fallback_strategy: OFF
+    locale_varied_translatable: false
+    can_be_locale_varied_translatable: false
+    restriction: UNRESTRICTED
+  }
+  schema_fields {
+    name: "is_scroll_animated"
+    type: "BooleanField"
+    can_index: true
+    can_be_translated: false
+    indexed: false
+    translatable: false
+    repeated: false
+    required: false
+    displayed: false
+    description: "Denotes if the specific section/component has scroll related animations."
+    validation_rule: ""
+    label: false
+    can_index_repeated: true
+    can_be_locale_varied: true
+    locale_varied: false
+    path_info {
+      path: "is_scroll_animated"
+      field_type: UNLOCALIZED
+    }
+    can_be_required: false
+    fallback_strategy: OFF
+    locale_varied_translatable: false
+    can_be_locale_varied_translatable: false
+    restriction: UNRESTRICTED
+  }
+  schema_fields {
+    name: "use_custom_site_template"
+    type: "BooleanField"
+    can_index: true
+    can_be_translated: false
+    indexed: false
+    translatable: false
+    repeated: false
+    required: false
+    displayed: false
+    description: "If true then the custom site template will be lookeds. For instance if your site is `enterprise` then the folders will be looked up with `/enterprise/` as a prefix."
+    validation_rule: ""
+    label: false
+    can_index_repeated: true
+    can_be_locale_varied: true
+    locale_varied: false
+    path_info {
+      path: "use_custom_site_template"
+      field_type: UNLOCALIZED
+    }
+    can_be_required: false
+    fallback_strategy: OFF
+    locale_varied_translatable: false
+    can_be_locale_varied_translatable: false
+    restriction: UNRESTRICTED
+  }
+  schema_fields {
+    name: "localization_config"
     type: "NestedField"
     can_index: false
     can_be_translated: false
@@ -14,648 +143,90 @@ schemas {
     displayed: false
     description: ""
     validation_rule: ""
-    schema_name: "UIConfig"
+    schema_name: "LocalizationConfig"
     schema_fields {
-      name: "is_reversed"
+      name: "is_exclude"
       type: "BooleanField"
       can_index: true
       can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: false
-      required: false
-      displayed: false
-      description: "Denotes if the specific element has to be displayed in a reversed fashion."
-      validation_rule: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "ui_config__is_reversed"
-        field_type: UNLOCALIZED
-      }
-      can_be_required: false
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "is_dark_theme"
-      type: "BooleanField"
-      can_index: true
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: false
-      required: false
-      displayed: false
-      description: "Defines if the element will render with darker background and lighter font color."
-      validation_rule: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "ui_config__is_dark_theme"
-        field_type: UNLOCALIZED
-      }
-      can_be_required: false
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "is_full_bleed"
-      type: "BooleanField"
-      can_index: true
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: false
-      required: false
-      displayed: false
-      description: "Defines if the component will have an image bleeding from ether side"
-      validation_rule: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "ui_config__is_full_bleed"
-        field_type: UNLOCALIZED
-      }
-      can_be_required: false
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "is_scroll_animated"
-      type: "BooleanField"
-      can_index: true
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: false
-      required: false
-      displayed: false
-      description: "Denotes if the specific section/component has scroll related animations."
-      validation_rule: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "ui_config__is_scroll_animated"
-        field_type: UNLOCALIZED
-      }
-      can_be_required: false
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "use_custom_site_template"
-      type: "BooleanField"
-      can_index: true
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: false
-      required: false
-      displayed: false
-      description: "If true then the custom site template will be lookeds. For instance if your site is `enterprise` then the folders will be looked up with `/enterprise/` as a prefix."
-      validation_rule: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "ui_config__use_custom_site_template"
-        field_type: UNLOCALIZED
-      }
-      can_be_required: false
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "localization_config"
-      type: "NestedField"
-      can_index: false
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: false
-      required: false
-      displayed: false
-      description: ""
-      validation_rule: ""
-      schema_name: "LocalizationConfig"
-      schema_fields {
-        name: "is_exclude"
-        type: "BooleanField"
-        can_index: true
-        can_be_translated: false
-        indexed: true
-        translatable: false
-        repeated: false
-        required: false
-        displayed: true
-        description: "When turned off it generates the page in the listed locales, when turned on all locales are included but the selected ones."
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "ui_config__localization_config__is_exclude"
-          field_type: UNLOCALIZED
-        }
-        can_be_required: false
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: false
-        restriction: UNRESTRICTED
-      }
-      schema_fields {
-        name: "locales"
-        type: "MultiChoiceField"
-        can_index: true
-        can_be_translated: false
-        indexed: false
-        translatable: false
-        repeated: true
-        required: false
-        displayed: false
-        description: "Defines the locales to be included/excluded for the page/component to render. If nothing is selected the default locales will be shown. Podspec locales will be used if no locales are selected."
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "ui_config__localization_config__locales"
-          field_type: UNLOCALIZED
-        }
-        choices: "ar"
-        choices: "en_US"
-        choices: "da_DK"
-        choices: "de_BE"
-        choices: "de_DE"
-        choices: "en_AU"
-        choices: "en_BE"
-        choices: "en_CA"
-        choices: "en_HK"
-        choices: "en_IN"
-        choices: "en_UK"
-        choices: "es_ES"
-        choices: "es_MX"
-        choices: "fil_PH"
-        choices: "fr_BE"
-        choices: "fr_CA"
-        choices: "fr_FR"
-        choices: "hi_IN"
-        choices: "id_ID"
-        choices: "it_IT"
-        choices: "ja_JP"
-        choices: "ko_KR"
-        choices: "nb_NO"
-        choices: "nl_BE"
-        choices: "nl_NL"
-        choices: "no_NO"
-        choices: "pt_BR"
-        choices: "pt_PT"
-        choices: "ru_RU"
-        choices: "sv_SE"
-        choices: "sw"
-        choices: "sw_TZ"
-        choices: "th_TH"
-        choices: "tr_TR"
-        choices: "vi_VN"
-        choices: "zh_Hans_CN"
-        choices: "zh_Hant_HK"
-        choices: "zh_Hant_TW"
-        can_be_required: true
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: false
-        restriction: UNRESTRICTED
-      }
-      label: false
-      can_index_repeated: false
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "ui_config__localization_config"
-        field_type: UNLOCALIZED
-      }
-      can_be_required: true
-      repo_id: "g6-android-spotlight"
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "animation_id"
-      type: "StringField"
-      can_index: true
-      can_be_translated: true
       indexed: true
-      translatable: true
+      translatable: false
       repeated: false
       required: false
-      displayed: false
-      description: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "ui_config__animation_id"
-        field_type: TRANSLATABLE
-      }
-      can_be_required: true
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: true
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "type"
-      type: "SingleChoiceField"
-      can_index: true
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: false
-      required: true
-      displayed: false
-      description: ""
-      validation_rule: ""
-      default {
-        field_name: "type"
-        field_values {
-          value: "Primary"
-        }
-      }
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "ui_config__type"
-        field_type: UNLOCALIZED
-      }
-      choices: "Primary"
-      choices: "Secondary"
-      choices: "Tertiary"
-      choices: "Quaternary"
-      choices: "Quinary"
-      can_be_required: true
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
-    label: false
-    can_index_repeated: false
-    can_be_locale_varied: true
-    locale_varied: false
-    path_info {
-      path: "ui_config"
-      field_type: UNLOCALIZED
-    }
-    can_be_required: true
-    repo_id: "g6-android-spotlight"
-    fallback_strategy: OFF
-    locale_varied_translatable: false
-    can_be_locale_varied_translatable: false
-    restriction: UNRESTRICTED
-  }
-  schema_fields {
-    name: "main_image"
-    type: "ReferenceField"
-    can_index: true
-    can_be_translated: false
-    indexed: false
-    translatable: false
-    repeated: false
-    required: false
-    displayed: false
-    description: "Main image to displayed with the data."
-    validation_rule: ""
-    label: false
-    can_index_repeated: true
-    can_be_locale_varied: true
-    locale_varied: false
-    path_info {
-      path: "main_image"
-      field_type: UNLOCALIZED
-    }
-    can_be_required: true
-    collections {
-      collection_id: "Images"
-      repo_id: "g6-android-spotlight"
-    }
-    collections {
-      collection_id: "Pictures"
-      repo_id: "g6-android-spotlight"
-    }
-    fallback_strategy: OFF
-    locale_varied_translatable: false
-    can_be_locale_varied_translatable: false
-    restriction: UNRESTRICTED
-  }
-  schema_fields {
-    name: "images"
-    type: "ReferenceField"
-    can_index: true
-    can_be_translated: false
-    indexed: false
-    translatable: false
-    repeated: true
-    required: false
-    displayed: false
-    description: "Secondary images. Usually used to support the component."
-    validation_rule: ""
-    label: false
-    can_index_repeated: true
-    can_be_locale_varied: true
-    locale_varied: false
-    path_info {
-      path: "images"
-      field_type: UNLOCALIZED
-    }
-    can_be_required: true
-    collections {
-      collection_id: "Images"
-      repo_id: "g6-android-spotlight"
-    }
-    collections {
-      collection_id: "Pictures"
-      repo_id: "g6-android-spotlight"
-    }
-    collections {
-      collection_id: "SVGs"
-      repo_id: "g6-android-spotlight"
-    }
-    fallback_strategy: OFF
-    locale_varied_translatable: false
-    can_be_locale_varied_translatable: false
-    restriction: UNRESTRICTED
-  }
-  schema_fields {
-    name: "videos"
-    type: "ReferenceField"
-    can_index: true
-    can_be_translated: false
-    indexed: false
-    translatable: false
-    repeated: true
-    required: false
-    displayed: false
-    description: ""
-    validation_rule: ""
-    label: false
-    can_index_repeated: true
-    can_be_locale_varied: true
-    locale_varied: false
-    path_info {
-      path: "videos"
-      field_type: UNLOCALIZED
-    }
-    can_be_required: true
-    collections {
-      collection_id: "Videos"
-      repo_id: "g6-android-spotlight"
-    }
-    fallback_strategy: OFF
-    locale_varied_translatable: false
-    can_be_locale_varied_translatable: false
-    restriction: UNRESTRICTED
-  }
-  schema_fields {
-    name: "icon"
-    type: "ReferenceField"
-    can_index: true
-    can_be_translated: false
-    indexed: false
-    translatable: false
-    repeated: false
-    required: false
-    displayed: false
-    description: ""
-    validation_rule: ""
-    label: false
-    can_index_repeated: true
-    can_be_locale_varied: true
-    locale_varied: false
-    path_info {
-      path: "icon"
-      field_type: UNLOCALIZED
-    }
-    can_be_required: true
-    collections {
-      collection_id: "SVGs"
-      repo_id: "g6-android-spotlight"
-    }
-    collections {
-      collection_id: "Images"
-      repo_id: "g6-android-spotlight"
-    }
-    fallback_strategy: OFF
-    locale_varied_translatable: false
-    can_be_locale_varied_translatable: false
-    restriction: UNRESTRICTED
-  }
-  schema_fields {
-    name: "eyebrow"
-    type: "StringField"
-    can_index: true
-    can_be_translated: true
-    indexed: true
-    translatable: true
-    repeated: false
-    required: false
-    displayed: true
-    description: ""
-    label: false
-    can_index_repeated: true
-    can_be_locale_varied: true
-    locale_varied: false
-    path_info {
-      path: "eyebrow"
-      field_type: TRANSLATABLE
-    }
-    can_be_required: true
-    fallback_strategy: OFF
-    locale_varied_translatable: false
-    can_be_locale_varied_translatable: true
-    restriction: UNRESTRICTED
-  }
-  schema_fields {
-    name: "headings"
-    type: "StringField"
-    can_index: true
-    can_be_translated: true
-    indexed: true
-    translatable: true
-    repeated: true
-    required: false
-    displayed: false
-    description: ""
-    label: false
-    can_index_repeated: true
-    can_be_locale_varied: true
-    locale_varied: false
-    path_info {
-      path: "headings"
-      field_type: TRANSLATABLE
-    }
-    can_be_required: true
-    fallback_strategy: OFF
-    locale_varied_translatable: false
-    can_be_locale_varied_translatable: true
-    restriction: UNRESTRICTED
-  }
-  schema_fields {
-    name: "bodies"
-    type: "TextField"
-    can_index: true
-    can_be_translated: true
-    indexed: false
-    translatable: true
-    repeated: true
-    required: false
-    displayed: false
-    description: ""
-    validation_rule: ""
-    label: false
-    can_index_repeated: true
-    can_be_locale_varied: true
-    locale_varied: false
-    path_info {
-      path: "bodies"
-      field_type: TRANSLATABLE
-    }
-    can_be_required: true
-    fallback_strategy: OFF
-    locale_varied_translatable: false
-    can_be_locale_varied_translatable: true
-    restriction: UNRESTRICTED
-  }
-  schema_fields {
-    name: "ctas"
-    type: "NestedField"
-    can_index: false
-    can_be_translated: false
-    indexed: false
-    translatable: false
-    repeated: true
-    required: false
-    displayed: false
-    description: ""
-    validation_rule: ""
-    schema_name: "CTA"
-    schema_fields {
-      name: "type"
-      type: "SingleChoiceField"
-      can_index: true
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: false
-      required: true
-      displayed: false
-      description: ""
-      validation_rule: ""
-      default {
-        field_name: "type"
-        field_values {
-          value: "Primary"
-        }
-      }
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "ctas__type"
-        field_type: UNLOCALIZED
-      }
-      choices: "Primary"
-      choices: "Secondary"
-      can_be_required: true
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "label"
-      type: "StringField"
-      can_index: true
-      can_be_translated: true
-      indexed: true
-      translatable: true
-      repeated: false
-      required: true
       displayed: true
-      description: ""
+      description: "When turned off it generates the page in the listed locales, when turned on all locales are included but the selected ones."
       label: false
       can_index_repeated: true
       can_be_locale_varied: true
       locale_varied: false
       path_info {
-        path: "ctas__label"
-        field_type: TRANSLATABLE
+        path: "localization_config__is_exclude"
+        field_type: UNLOCALIZED
       }
-      can_be_required: true
+      can_be_required: false
       fallback_strategy: OFF
       locale_varied_translatable: false
-      can_be_locale_varied_translatable: true
+      can_be_locale_varied_translatable: false
       restriction: UNRESTRICTED
     }
     schema_fields {
-      name: "link"
-      type: "ReferenceField"
+      name: "locales"
+      type: "MultiChoiceField"
       can_index: true
       can_be_translated: false
-      indexed: true
+      indexed: false
       translatable: false
-      repeated: false
-      required: true
+      repeated: true
+      required: false
       displayed: false
-      description: ""
-      validation_rule: ""
+      description: "Defines the locales to be included/excluded for the page/component to render. If nothing is selected the default locales will be shown. Podspec locales will be used if no locales are selected."
       label: false
       can_index_repeated: true
       can_be_locale_varied: true
       locale_varied: false
       path_info {
-        path: "ctas__link"
+        path: "localization_config__locales"
         field_type: UNLOCALIZED
       }
-      validation_rule_message: "The URL needs to be valid. Three (3) types of URLs are supported: relative urls (starting and ending with slash), anchor links like #this and external links starting with http(s)."
+      choices: "ar"
+      choices: "en_US"
+      choices: "da_DK"
+      choices: "de_BE"
+      choices: "de_DE"
+      choices: "en_AU"
+      choices: "en_BE"
+      choices: "en_CA"
+      choices: "en_HK"
+      choices: "en_IN"
+      choices: "en_UK"
+      choices: "es_ES"
+      choices: "es_MX"
+      choices: "fil_PH"
+      choices: "fr_BE"
+      choices: "fr_CA"
+      choices: "fr_FR"
+      choices: "hi_IN"
+      choices: "id_ID"
+      choices: "it_IT"
+      choices: "ja_JP"
+      choices: "ko_KR"
+      choices: "nb_NO"
+      choices: "nl_BE"
+      choices: "nl_NL"
+      choices: "no_NO"
+      choices: "pt_BR"
+      choices: "pt_PT"
+      choices: "ru_RU"
+      choices: "sv_SE"
+      choices: "sw"
+      choices: "sw_TZ"
+      choices: "th_TH"
+      choices: "tr_TR"
+      choices: "vi_VN"
+      choices: "zh_Hans_CN"
+      choices: "zh_Hant_HK"
+      choices: "zh_Hant_TW"
       can_be_required: true
-      collections {
-        collection_id: "Links"
-        repo_id: "g6-android-spotlight"
-      }
-      collections {
-        collection_id: "Videos"
-        repo_id: "g6-android-spotlight"
-      }
-      collections {
-        collection_id: "Files"
-        repo_id: "g6-android-spotlight"
-      }
       fallback_strategy: OFF
       locale_varied_translatable: false
       can_be_locale_varied_translatable: false
@@ -666,7 +237,7 @@ schemas {
     can_be_locale_varied: true
     locale_varied: false
     path_info {
-      path: "ctas"
+      path: "localization_config"
       field_type: UNLOCALIZED
     }
     can_be_required: true
@@ -677,917 +248,72 @@ schemas {
     restriction: UNRESTRICTED
   }
   schema_fields {
-    name: "children"
-    type: "NestedField"
-    can_index: false
-    can_be_translated: false
-    indexed: false
-    translatable: false
-    repeated: true
+    name: "animation_id"
+    type: "StringField"
+    can_index: true
+    can_be_translated: true
+    indexed: true
+    translatable: true
+    repeated: false
     required: false
     displayed: false
     description: ""
-    validation_rule: ""
-    schema_name: "SubData"
-    schema_fields {
-      name: "ui_config"
-      type: "NestedField"
-      can_index: false
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: false
-      required: false
-      displayed: false
-      description: ""
-      schema_name: "UIConfig"
-      schema_fields {
-        name: "is_reversed"
-        type: "BooleanField"
-        can_index: true
-        can_be_translated: false
-        indexed: false
-        translatable: false
-        repeated: false
-        required: false
-        displayed: false
-        description: "Denotes if the specific element has to be displayed in a reversed fashion."
-        validation_rule: ""
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "children__ui_config__is_reversed"
-          field_type: UNLOCALIZED
-        }
-        can_be_required: false
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: false
-        restriction: UNRESTRICTED
-      }
-      schema_fields {
-        name: "is_dark_theme"
-        type: "BooleanField"
-        can_index: true
-        can_be_translated: false
-        indexed: false
-        translatable: false
-        repeated: false
-        required: false
-        displayed: false
-        description: "Defines if the element will render with darker background and lighter font color."
-        validation_rule: ""
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "children__ui_config__is_dark_theme"
-          field_type: UNLOCALIZED
-        }
-        can_be_required: false
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: false
-        restriction: UNRESTRICTED
-      }
-      schema_fields {
-        name: "is_full_bleed"
-        type: "BooleanField"
-        can_index: true
-        can_be_translated: false
-        indexed: false
-        translatable: false
-        repeated: false
-        required: false
-        displayed: false
-        description: "Defines if the component will have an image bleeding from ether side"
-        validation_rule: ""
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "children__ui_config__is_full_bleed"
-          field_type: UNLOCALIZED
-        }
-        can_be_required: false
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: false
-        restriction: UNRESTRICTED
-      }
-      schema_fields {
-        name: "is_scroll_animated"
-        type: "BooleanField"
-        can_index: true
-        can_be_translated: false
-        indexed: false
-        translatable: false
-        repeated: false
-        required: false
-        displayed: false
-        description: "Denotes if the specific section/component has scroll related animations."
-        validation_rule: ""
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "children__ui_config__is_scroll_animated"
-          field_type: UNLOCALIZED
-        }
-        can_be_required: false
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: false
-        restriction: UNRESTRICTED
-      }
-      schema_fields {
-        name: "use_custom_site_template"
-        type: "BooleanField"
-        can_index: true
-        can_be_translated: false
-        indexed: false
-        translatable: false
-        repeated: false
-        required: false
-        displayed: false
-        description: "If true then the custom site template will be lookeds. For instance if your site is `enterprise` then the folders will be looked up with `/enterprise/` as a prefix."
-        validation_rule: ""
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "children__ui_config__use_custom_site_template"
-          field_type: UNLOCALIZED
-        }
-        can_be_required: false
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: false
-        restriction: UNRESTRICTED
-      }
-      schema_fields {
-        name: "localization_config"
-        type: "NestedField"
-        can_index: false
-        can_be_translated: false
-        indexed: false
-        translatable: false
-        repeated: false
-        required: false
-        displayed: false
-        description: ""
-        validation_rule: ""
-        schema_name: "LocalizationConfig"
-        schema_fields {
-          name: "is_exclude"
-          type: "BooleanField"
-          can_index: true
-          can_be_translated: false
-          indexed: true
-          translatable: false
-          repeated: false
-          required: false
-          displayed: true
-          description: "When turned off it generates the page in the listed locales, when turned on all locales are included but the selected ones."
-          label: false
-          can_index_repeated: true
-          can_be_locale_varied: true
-          locale_varied: false
-          path_info {
-            path: "children__ui_config__localization_config__is_exclude"
-            field_type: UNLOCALIZED
-          }
-          can_be_required: false
-          fallback_strategy: OFF
-          locale_varied_translatable: false
-          can_be_locale_varied_translatable: false
-          restriction: UNRESTRICTED
-        }
-        schema_fields {
-          name: "locales"
-          type: "MultiChoiceField"
-          can_index: true
-          can_be_translated: false
-          indexed: false
-          translatable: false
-          repeated: true
-          required: false
-          displayed: false
-          description: "Defines the locales to be included/excluded for the page/component to render. If nothing is selected the default locales will be shown. Podspec locales will be used if no locales are selected."
-          label: false
-          can_index_repeated: true
-          can_be_locale_varied: true
-          locale_varied: false
-          path_info {
-            path: "children__ui_config__localization_config__locales"
-            field_type: UNLOCALIZED
-          }
-          choices: "ar"
-          choices: "en_US"
-          choices: "da_DK"
-          choices: "de_BE"
-          choices: "de_DE"
-          choices: "en_AU"
-          choices: "en_BE"
-          choices: "en_CA"
-          choices: "en_HK"
-          choices: "en_IN"
-          choices: "en_UK"
-          choices: "es_ES"
-          choices: "es_MX"
-          choices: "fil_PH"
-          choices: "fr_BE"
-          choices: "fr_CA"
-          choices: "fr_FR"
-          choices: "hi_IN"
-          choices: "id_ID"
-          choices: "it_IT"
-          choices: "ja_JP"
-          choices: "ko_KR"
-          choices: "nb_NO"
-          choices: "nl_BE"
-          choices: "nl_NL"
-          choices: "no_NO"
-          choices: "pt_BR"
-          choices: "pt_PT"
-          choices: "ru_RU"
-          choices: "sv_SE"
-          choices: "sw"
-          choices: "sw_TZ"
-          choices: "th_TH"
-          choices: "tr_TR"
-          choices: "vi_VN"
-          choices: "zh_Hans_CN"
-          choices: "zh_Hant_HK"
-          choices: "zh_Hant_TW"
-          can_be_required: true
-          fallback_strategy: OFF
-          locale_varied_translatable: false
-          can_be_locale_varied_translatable: false
-          restriction: UNRESTRICTED
-        }
-        label: false
-        can_index_repeated: false
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "children__ui_config__localization_config"
-          field_type: UNLOCALIZED
-        }
-        can_be_required: true
-        repo_id: "g6-android-spotlight"
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: false
-        restriction: UNRESTRICTED
-      }
-      schema_fields {
-        name: "animation_id"
-        type: "StringField"
-        can_index: true
-        can_be_translated: true
-        indexed: true
-        translatable: true
-        repeated: false
-        required: false
-        displayed: false
-        description: ""
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "children__ui_config__animation_id"
-          field_type: TRANSLATABLE
-        }
-        can_be_required: true
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: true
-        restriction: UNRESTRICTED
-      }
-      schema_fields {
-        name: "type"
-        type: "SingleChoiceField"
-        can_index: true
-        can_be_translated: false
-        indexed: false
-        translatable: false
-        repeated: false
-        required: true
-        displayed: false
-        description: ""
-        validation_rule: ""
-        default {
-          field_name: "type"
-          field_values {
-            value: "Primary"
-          }
-        }
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "children__ui_config__type"
-          field_type: UNLOCALIZED
-        }
-        choices: "Primary"
-        choices: "Secondary"
-        choices: "Tertiary"
-        choices: "Quaternary"
-        choices: "Quinary"
-        can_be_required: true
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: false
-        restriction: UNRESTRICTED
-      }
-      label: false
-      can_index_repeated: false
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "children__ui_config"
-        field_type: UNLOCALIZED
-      }
-      can_be_required: true
-      repo_id: "g6-android-spotlight"
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "main_image"
-      type: "ReferenceField"
-      can_index: true
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: false
-      required: false
-      displayed: false
-      description: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "children__main_image"
-        field_type: UNLOCALIZED
-      }
-      can_be_required: true
-      collections {
-        collection_id: "Images"
-        repo_id: "g6-android-spotlight"
-      }
-      collections {
-        collection_id: "Pictures"
-        repo_id: "g6-android-spotlight"
-      }
-      collections {
-        collection_id: "SVGs"
-        repo_id: "g6-android-spotlight"
-      }
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "images"
-      type: "ReferenceField"
-      can_index: true
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: true
-      required: false
-      displayed: false
-      description: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "children__images"
-        field_type: UNLOCALIZED
-      }
-      can_be_required: true
-      collections {
-        collection_id: "Images"
-        repo_id: "g6-android-spotlight"
-      }
-      collections {
-        collection_id: "Pictures"
-        repo_id: "g6-android-spotlight"
-      }
-      collections {
-        collection_id: "SVGs"
-        repo_id: "g6-android-spotlight"
-      }
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "videos"
-      type: "ReferenceField"
-      can_index: true
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: true
-      required: false
-      displayed: false
-      description: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "children__videos"
-        field_type: UNLOCALIZED
-      }
-      can_be_required: true
-      collections {
-        collection_id: "Videos"
-        repo_id: "g6-android-spotlight"
-      }
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "icon"
-      type: "ReferenceField"
-      can_index: true
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: false
-      required: false
-      displayed: false
-      description: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "children__icon"
-        field_type: UNLOCALIZED
-      }
-      can_be_required: true
-      collections {
-        collection_id: "SVGs"
-        repo_id: "g6-android-spotlight"
-      }
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "eyebrow"
-      type: "StringField"
-      can_index: true
-      can_be_translated: true
-      indexed: false
-      translatable: true
-      repeated: false
-      required: false
-      displayed: false
-      description: ""
-      validation_rule: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "children__eyebrow"
-        field_type: TRANSLATABLE
-      }
-      validation_rule_message: ""
-      can_be_required: true
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: true
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "headings"
-      type: "StringField"
-      can_index: true
-      can_be_translated: true
-      indexed: false
-      translatable: true
-      repeated: true
-      required: false
-      displayed: false
-      description: ""
-      validation_rule: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "children__headings"
-        field_type: TRANSLATABLE
-      }
-      validation_rule_message: ""
-      can_be_required: true
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: true
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "bodies"
-      type: "StringField"
-      can_index: true
-      can_be_translated: true
-      indexed: false
-      translatable: true
-      repeated: true
-      required: false
-      displayed: false
-      description: ""
-      validation_rule: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "children__bodies"
-        field_type: TRANSLATABLE
-      }
-      validation_rule_message: ""
-      can_be_required: true
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: true
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "ctas"
-      type: "NestedField"
-      can_index: false
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: true
-      required: false
-      displayed: false
-      description: ""
-      schema_name: "CTA"
-      schema_fields {
-        name: "type"
-        type: "SingleChoiceField"
-        can_index: true
-        can_be_translated: false
-        indexed: false
-        translatable: false
-        repeated: false
-        required: true
-        displayed: false
-        description: ""
-        validation_rule: ""
-        default {
-          field_name: "type"
-          field_values {
-            value: "Primary"
-          }
-        }
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "children__ctas__type"
-          field_type: UNLOCALIZED
-        }
-        choices: "Primary"
-        choices: "Secondary"
-        can_be_required: true
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: false
-        restriction: UNRESTRICTED
-      }
-      schema_fields {
-        name: "label"
-        type: "StringField"
-        can_index: true
-        can_be_translated: true
-        indexed: true
-        translatable: true
-        repeated: false
-        required: true
-        displayed: true
-        description: ""
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "children__ctas__label"
-          field_type: TRANSLATABLE
-        }
-        can_be_required: true
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: true
-        restriction: UNRESTRICTED
-      }
-      schema_fields {
-        name: "link"
-        type: "ReferenceField"
-        can_index: true
-        can_be_translated: false
-        indexed: true
-        translatable: false
-        repeated: false
-        required: true
-        displayed: false
-        description: ""
-        validation_rule: ""
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "children__ctas__link"
-          field_type: UNLOCALIZED
-        }
-        validation_rule_message: "The URL needs to be valid. Three (3) types of URLs are supported: relative urls (starting and ending with slash), anchor links like #this and external links starting with http(s)."
-        can_be_required: true
-        collections {
-          collection_id: "Links"
-          repo_id: "g6-android-spotlight"
-        }
-        collections {
-          collection_id: "Videos"
-          repo_id: "g6-android-spotlight"
-        }
-        collections {
-          collection_id: "Files"
-          repo_id: "g6-android-spotlight"
-        }
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: false
-        restriction: UNRESTRICTED
-      }
-      label: false
-      can_index_repeated: false
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "children__ctas"
-        field_type: UNLOCALIZED
-      }
-      can_be_required: true
-      repo_id: "g6-android-spotlight"
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
-    }
     label: false
-    can_index_repeated: false
+    can_index_repeated: true
     can_be_locale_varied: true
     locale_varied: false
     path_info {
-      path: "children"
-      field_type: UNLOCALIZED
+      path: "animation_id"
+      field_type: TRANSLATABLE
     }
     can_be_required: true
-    repo_id: "g6-android-spotlight"
     fallback_strategy: OFF
     locale_varied_translatable: false
-    can_be_locale_varied_translatable: false
+    can_be_locale_varied_translatable: true
     restriction: UNRESTRICTED
   }
   schema_fields {
-    name: "accordion_items"
-    type: "NestedField"
-    can_index: false
+    name: "type"
+    type: "SingleChoiceField"
+    can_index: true
     can_be_translated: false
     indexed: false
     translatable: false
-    repeated: true
-    required: false
+    repeated: false
+    required: true
     displayed: false
     description: ""
     validation_rule: ""
-    schema_name: "AccordionItem"
-    schema_fields {
-      name: "heading"
-      type: "StringField"
-      can_index: true
-      can_be_translated: true
-      indexed: false
-      translatable: true
-      repeated: false
-      required: false
-      displayed: false
-      description: ""
-      validation_rule: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "accordion_items__heading"
-        field_type: TRANSLATABLE
+    default {
+      field_name: "type"
+      field_values {
+        value: "Primary"
       }
-      can_be_required: true
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: true
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "bodies"
-      type: "TextField"
-      can_index: true
-      can_be_translated: true
-      indexed: false
-      translatable: true
-      repeated: true
-      required: false
-      displayed: false
-      description: ""
-      validation_rule: ""
-      label: false
-      can_index_repeated: true
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "accordion_items__bodies"
-        field_type: TRANSLATABLE
-      }
-      can_be_required: true
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: true
-      restriction: UNRESTRICTED
-    }
-    schema_fields {
-      name: "ctas"
-      type: "NestedField"
-      can_index: false
-      can_be_translated: false
-      indexed: false
-      translatable: false
-      repeated: true
-      required: false
-      displayed: false
-      description: ""
-      validation_rule: ""
-      schema_name: "CTA"
-      schema_fields {
-        name: "type"
-        type: "SingleChoiceField"
-        can_index: true
-        can_be_translated: false
-        indexed: false
-        translatable: false
-        repeated: false
-        required: true
-        displayed: false
-        description: ""
-        validation_rule: ""
-        default {
-          field_name: "type"
-          field_values {
-            value: "Primary"
-          }
-        }
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "accordion_items__ctas__type"
-          field_type: UNLOCALIZED
-        }
-        choices: "Primary"
-        choices: "Secondary"
-        can_be_required: true
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: false
-        restriction: UNRESTRICTED
-      }
-      schema_fields {
-        name: "label"
-        type: "StringField"
-        can_index: true
-        can_be_translated: true
-        indexed: true
-        translatable: true
-        repeated: false
-        required: true
-        displayed: true
-        description: ""
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "accordion_items__ctas__label"
-          field_type: TRANSLATABLE
-        }
-        can_be_required: true
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: true
-        restriction: UNRESTRICTED
-      }
-      schema_fields {
-        name: "link"
-        type: "ReferenceField"
-        can_index: true
-        can_be_translated: false
-        indexed: true
-        translatable: false
-        repeated: false
-        required: true
-        displayed: false
-        description: ""
-        validation_rule: ""
-        label: false
-        can_index_repeated: true
-        can_be_locale_varied: true
-        locale_varied: false
-        path_info {
-          path: "accordion_items__ctas__link"
-          field_type: UNLOCALIZED
-        }
-        validation_rule_message: "The URL needs to be valid. Three (3) types of URLs are supported: relative urls (starting and ending with slash), anchor links like #this and external links starting with http(s)."
-        can_be_required: true
-        collections {
-          collection_id: "Links"
-          repo_id: "g6-android-spotlight"
-        }
-        collections {
-          collection_id: "Videos"
-          repo_id: "g6-android-spotlight"
-        }
-        collections {
-          collection_id: "Files"
-          repo_id: "g6-android-spotlight"
-        }
-        fallback_strategy: OFF
-        locale_varied_translatable: false
-        can_be_locale_varied_translatable: false
-        restriction: UNRESTRICTED
-      }
-      label: false
-      can_index_repeated: false
-      can_be_locale_varied: true
-      locale_varied: false
-      path_info {
-        path: "accordion_items__ctas"
-        field_type: UNLOCALIZED
-      }
-      can_be_required: true
-      repo_id: "g6-android-spotlight"
-      fallback_strategy: OFF
-      locale_varied_translatable: false
-      can_be_locale_varied_translatable: false
-      restriction: UNRESTRICTED
     }
     label: false
-    can_index_repeated: false
+    can_index_repeated: true
     can_be_locale_varied: true
     locale_varied: false
     path_info {
-      path: "accordion_items"
+      path: "type"
       field_type: UNLOCALIZED
     }
+    choices: "Primary"
+    choices: "Secondary"
+    choices: "Tertiary"
+    choices: "Quaternary"
+    choices: "Quinary"
     can_be_required: true
-    repo_id: "g6-android-spotlight"
     fallback_strategy: OFF
     locale_varied_translatable: false
     can_be_locale_varied_translatable: false
     restriction: UNRESTRICTED
   }
   mod_info {
-    created_on_millis: 1620421197700
-    updated_on_millis: 1620421250846
+    created_on_millis: 1620421193255
+    updated_on_millis: 1620421193255
     created_by: "dwasilewski@google.com"
     updated_by: "dwasilewski@google.com"
   }
-  db_id: "_79ac159ead2d47009470518ebabc5d0a_"
+  db_id: "_447b09cb0c16421184e4f5d295858000_"
 }
